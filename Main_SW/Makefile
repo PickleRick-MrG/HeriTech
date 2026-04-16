@@ -1,7 +1,8 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -Wextra
+CXXFLAGS = -std=c++11 -Wall -Wextra -I.
 TARGET = main
-SOURCES = main.cpp
+SOURCES = $(wildcard *.cpp) $(wildcard */*.cpp)
+
 OBJECTS = $(SOURCES:.cpp=.o)
 
 all: $(TARGET)
